@@ -56,6 +56,7 @@ Smalltalk-80"
 (let* ((class '((class color) (min-colors 89)))
        (bg    (if tok-theme-dark "#171717" "#fdfdf7"))
        (fg    (if tok-theme-dark "#fdfdf7" "#171717"))
+       (dim-0 (if tok-theme-dark "grey15" "grey95"))
        (dim-1 (if tok-theme-dark "grey15" "grey90"))
        (dim-2 (if tok-theme-dark "grey25" "grey80"))
        (dim-3 (if tok-theme-dark "grey35" "grey70"))
@@ -73,7 +74,7 @@ Smalltalk-80"
    (when (display-graphic-p) ; Have to call `when' here due to reasons...
      `(cursor ((,class (:background ,fg)))))
 
-   `(highlight ((,class (:background ,dim-1))))
+   `(highlight ((,class (:background ,dim-0))))
    `(trailing-whitespace ((,class (:underline t))))
    `(region ((,class (:extend t :background ,dim-2))))
    `(secondary-selection ((,class (:inherit region))))
