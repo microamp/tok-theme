@@ -54,8 +54,8 @@ Smalltalk-80"
   :kind 'color-scheme)
 
 (let* ((class '((class color) (min-colors 89)))
-       (bg    (if tok-theme-dark "black" "white"))
-       (fg    (if tok-theme-dark "white" "black"))
+       (bg    (if tok-theme-dark "#171717" "#fdfdf7"))
+       (fg    (if tok-theme-dark "#fdfdf7" "#171717"))
        (dim-1 (if tok-theme-dark "grey15" "grey90"))
        (dim-2 (if tok-theme-dark "grey25" "grey80"))
        (dim-3 (if tok-theme-dark "grey35" "grey70"))
@@ -77,9 +77,9 @@ Smalltalk-80"
    `(trailing-whitespace ((,class (:underline t))))
    `(region ((,class (:extend t :background ,dim-2))))
    `(secondary-selection ((,class (:inherit region))))
-   `(error ((,class (:weight bold :foreground "red"))))
-   `(warning ((,class (:weight bold :foreground "orange"))))
-   `(success ((,class (:weight bold :foreground "green"))))
+   `(error ((,class (:weight bold :foreground "red4"))))
+   `(warning ((,class (:weight bold :foreground "orange4"))))
+   `(success ((,class (:weight bold :foreground "green4"))))
    `(fringe ((t (nil))))
    `(button ((,class (:box 1))))
    `(vertical-border ((,class (:foreground ,dim-2))))
@@ -149,6 +149,12 @@ Smalltalk-80"
    `(outline-7 ((,class (:inherit outline-1))))
    `(outline-8 ((,class (:inherit outline-1))))
 
+   ;; Bm
+   `(bm-face ((,class (:inherit pulse-highlight-face :extend t))))
+
+   ;; Xref
+   `(xref-file-header ((,class (:inherit success))))
+
    ;; Terraform
    `(terraform--resource-name-face ((t (nil))))
    `(terraform--resource-type-face ((t (nil))))
@@ -163,7 +169,12 @@ Smalltalk-80"
 
    ;; Magit
    `(magit-diff-file-heading ((t (nil))))
+   `(magit-process-ok ((,class (:inherit success))))
    `(magit-section-heading ((,class (:weight bold))))
+
+   `(git-gutter:added ((,class (:foreground ,dim-4 :bold t))))
+   `(git-gutter:deleted ((,class (:foreground ,dim-4 :bold t))))
+   `(git-gutter:modified ((,class (:foreground ,dim-4 :bold t))))
 
    ;; completions
    `(completions-common-part ((,class (:weight bold))))
