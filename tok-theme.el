@@ -99,6 +99,8 @@ Smalltalk-80"
    `(mode-line-emphasis ((,class (:weight bold))))
    `(mode-line-buffer-id ((,class (:weight bold))))
 
+   `(treemacs-root-face ((,class (:underline t :weight bold :height 1.0))))
+
    ;; Font-lock
    `(font-lock-comment-face ((,class (:italic t :foreground ,dim-4))))
    `(font-lock-comment-delimiter-face ((,class (:inherit font-lock-comment-face))))
