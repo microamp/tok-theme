@@ -46,7 +46,7 @@ If you want to use dark variant of theme, you can set `tok-theme-dark` to true
 before loading theme:
 
 ``` elisp
-(setq tok-theme-dark t)
+(setq tok-theme-dark t) ;; or nil for light mode
 (load-theme 'tok)
 ```
 
